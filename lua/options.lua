@@ -15,9 +15,14 @@ vim.opt.shiftwidth = 4
 vim.opt.clipboard = "unnamedplus"
 
 vim.opt.virtualedit = "block"
-
 vim.opt.inccommand = "split"
 
 vim.opt.ignorecase = true
 
 vim.opt.termguicolors = true
+
+-- leader key
+vim.g.mapleader = " "
+
+vim.keymap.set('i', 'jj', '<Esc>', { desc = "Exit Insert Mode with jj" })
+
