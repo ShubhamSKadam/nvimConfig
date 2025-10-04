@@ -25,10 +25,4 @@ vim.g.mapleader = " "
 
 vim.keymap.set('i', 'jj', '<Esc>', { desc = "Exit Insert Mode with jj" })
 
-local builtin = require("telescope.builtin")
-vim.keymap.set('n', '<Leader>ff', builtin.find_files,{}) -- Find File pnemonic
-vim.keymap.set('n', '<Leader>fg', builtin.live_grep,{}) -- Find File by grep
-
--- show file view
-vim.keymap.set('n','<leader>ft', ':Neotree filesystem reveal left<CR>',{}) -- File tree peneomic 
 
