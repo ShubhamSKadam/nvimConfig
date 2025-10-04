@@ -16,26 +16,29 @@ local plugins = {
         "rebelot/kanagawa.nvim",
         lazy = false,      -- Must load immediately on startup
         priority = 1000,   -- Ensure it loads before other UI components
-        config = function()
-            vim.cmd.colorscheme("kanagawa-dragon")
+        config = function() vim.cmd.colorscheme("kanagawa-dragon")
         end,
     },
-    {
+   {
         'nvim-telescope/telescope.nvim', tag = '0.1.8',
         dependencies = { 'nvim-lua/plenary.nvim' }
     },
     {
         "nvim-treesitter/nvim-treesitter", build = ":TSUpdate"
-    }
+    },
+    {
+        "nvim-neo-tree/neo-tree.nvim",
+        branch = "v3.x",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "MunifTanjim/nui.nvim",
+            "nvim-tree/nvim-web-devicons", 
+        },
+    },
 }
 
 local opts = {}
 require("lazy").setup(plugins,opts)
-
-local builtin = require("telescope.builtin")
-
-vim.keymap.set('n', '<Leader>ff', builtin.find_files,{})
-vim.keymap.set('n', '<Leader>fg', builtin.live_grep,{})
 
 local config = require("nvim-treesitter.configs") 
 config.setup({
