@@ -5,4 +5,3 @@ return  {
         config = function() vim.cmd.colorscheme("kanagawa-dragon")
         end,
     }
- 
