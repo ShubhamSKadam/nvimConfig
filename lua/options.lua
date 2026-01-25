@@ -4,6 +4,7 @@ vim.opt.relativenumber = true
 vim.opt.splitbelow = true 
 vim.opt.splitright = true 
 
+
 vim.opt.wrap = true
 
 vim.opt.expandtab = true
@@ -24,5 +25,6 @@ vim.opt.termguicolors = true
 vim.g.mapleader = " "
 
 vim.keymap.set('i', 'jj', '<Esc>', { desc = "Exit Insert Mode with jj" })
+
 
 
